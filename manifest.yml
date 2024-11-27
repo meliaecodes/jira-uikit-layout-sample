@@ -1,0 +1,23 @@
+modules:
+  jira:globalPage:
+    - key: jira-uikit-basic-layout-hello-world-global-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Jira UI Kit Layout Example
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x
+  id: <run forge register>
+permissions:
+  scopes: []
+  external:
+    images:
+      - i.imgur.com
